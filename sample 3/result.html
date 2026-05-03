@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Quiz Generator — Result</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="bg-layer bg-gradient"></div>
+    <div class="bg-layer bg-mesh"></div>
+    <div class="bg-layer bg-grain"></div>
+    <canvas id="particles" class="bg-layer"></canvas>
+
+    <main class="app-root">
+        <section id="page-result" class="page page-active">
+            <div class="glass-card result-card">
+                <div class="result-header">
+                    <div class="result-badge">QUIZ COMPLETE</div>
+                    <h1 class="result-title">Your Score</h1>
+
+                    <div class="score-circle">
+                        <svg width="180" height="180" viewBox="0 0 180 180">
+                            <circle cx="90" cy="90" r="78" class="score-ring-bg"></circle>
+                            <circle cx="90" cy="90" r="78" class="score-ring-fg" id="score-ring-fg"></circle>
+                        </svg>
+                        <div class="score-inner">
+                            <span class="score-value" id="score-value">0</span>
+                            <span class="score-total" id="score-total">/5</span>
+                        </div>
+                    </div>
+
+                    <p class="result-message" id="result-message">Well done!</p>
+
+                    <div class="result-stats">
+                        <div class="stat"><span class="stat-num stat-correct" id="stat-correct">0</span><span class="stat-label">Correct</span></div>
+                        <div class="stat"><span class="stat-num stat-wrong" id="stat-wrong">0</span><span class="stat-label">Wrong</span></div>
+                        <div class="stat"><span class="stat-num stat-skipped" id="stat-skipped">0</span><span class="stat-label">Skipped</span></div>
+                    </div>
+                </div>
+
+                <div class="review-section">
+                    <h3 class="review-title">REVIEW · ANSWERS</h3>
+                    <div id="review-list" class="review-list"></div>
+                </div>
+
+                <div class="result-actions">
+                    <button id="try-again-btn" class="btn-neon">
+                        <span class="btn-label">TRY AGAIN</span>
+                        <span class="btn-arrow">↻</span>
+                    </button>
+                    <button id="new-topic-btn" class="btn-ghost-alt">Pick new topic</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

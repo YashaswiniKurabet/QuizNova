@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Quiz Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER (matches: Header) -->
+  <header class="site-header glass">
+    <div class="logo">AI QUIZ GENERATOR</div>
+    <nav class="main-nav">
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#engine">Engine</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn ghost">Log In</button>
+      <button class="btn primary">Cart</button>
+    </div>
+  </header>
+
+  <!-- HERO (matches: Hero section text + form + image) -->
+  <section id="hero" class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title">MONUMENTAL</h1>
+        <p class="hero-subtitle">
+          Engage, Challenge, Learn with AI Quizzes. Instant, adaptive, and built for high‑stakes mastery.
+        </p>
+
+        <!-- This mirrors your Wix form: topic, difficulty, audience, etc. -->
+        <form class="hero-form glass" id="quiz-setup-form">
+          <h2>Generate Your AI Quiz</h2>
+
+          <label>
+            Topic
+            <input
+              type="text"
+              name="topic"
+              placeholder="e.g. Operating Systems, Organic Chemistry"
+              required
+            />
+          </label>
+
+          <label>
+            Difficulty
+            <select name="difficulty" required>
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </label>
+
+          <label>
+            Target Audience
+            <select name="audience" required>
+              <option value="school">School</option>
+              <option value="college">College</option>
+              <option value="competitive">Competitive Exams</option>
+              <option value="corporate">Corporate Training</option>
+            </select>
+          </label>
+
+          <label>
+            Number of Questions
+            <input
+              type="number"
+              name="questions"
+              min="5"
+              max="50"
+              value="10"
+              required
+            />
+          </label>
+
+          <button type="submit" class="btn primary full-width">
+            Generate Quiz
+          </button>
+        </form>
+      </div>
+
+      <!-- Right side: visual that stands in for your hero image + countdown -->
+      <div class="hero-visual glass">
+        <div class="countdown-ring">
+          <span id="countdown">15</span>
+        </div>
+        <p class="countdown-label">Neon Countdown</p>
+        <p class="countdown-text">
+          Experience a 15‑second pulse of urgency. Every question. Every time.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES (matches: “The Engine of Mastery” + 3 feature blocks + running text) -->
+  <section id="features" class="section features-section">
+    <header class="section-header">
+      <h2>The Engine of Mastery</h2>
+      <p>
+        Engineered for speed and precision, our AI system turns any topic into
+        high‑impact quiz challenges in seconds.
+      </p>
+    </header>
+
+    <div class="features-grid">
+      <article class="feature-card glass">
+        <h3>Neon Countdown</h3>
+        <p>
+          Experience a 15‑second pulse of urgency. Every quiz feels like a live arena.
+        </p>
+      </article>
+      <article class="feature-card glass">
+        <h3>Instant Scoring</h3>
+        <p>
+          Real‑time feedback is the future of learning. See your score update the moment you answer.
+        </p>
+      </article>
+      <article class="feature-card glass">
+        <h3>Adaptive AI</h3>
+        <p>
+          Our neural network adjusts difficulty based on your performance so you stay in the learning sweet spot.
+        </p>
+      </article>
+    </div>
+
+    <div class="marquee">
+      <div class="marquee-inner">
+        STAY SHARP / BE FAST / WIN BIG / STAY SHARP / BE FAST / WIN BIG /
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (matches: “The AI Engine” 01–04 steps) -->
+  <section id="how-it-works" class="section how-section">
+    <header class="section-header">
+      <h2>The AI Engine</h2>
+      <p>How we transform your inputs into high‑stakes knowledge drills.</p>
+    </header>
+
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">01</span>
+        <p class="step-text">
+          Input your topic, difficulty, and target audience in seconds.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-number">02</span>
+        <p class="step-text">
+          The AI generates unique, high‑entropy questions tailored to your goal.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-number">03</span>
+        <p class="step-text">
+          Instantly deploy your quiz with a sleek, futuristic interface.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-number">04</span>
+        <p class="step-text">
+          Track performance metrics and refine your strategy with every run.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINEERED FOR PRECISION (matches: “Engineered for Precision” + 6 feature rows) -->
+  <section id="engine" class="section engine-section">
+    <header class="section-header">
+      <h2>Engineered for Precision</h2>
+      <hr />
+    </header>
+
+    <div class="engine-grid">
+      <article class="engine-card glass">
+        <h3>Neural Synthesis</h3>
+        <p>
+          Our AI models analyze vast datasets to generate questions that feel human‑crafted.
+        </p>
+      </article>
+      <article class="engine-card glass">
+        <h3>Dynamic Scoring</h3>
+        <p>
+          Instant feedback loops provide real‑time performance tracking.
+        </p>
+      </article>
+      <article class="engine-card glass">
+        <h3>Adaptive Logic</h3>
+        <p>
+          Every quiz adapts to your responses, ensuring that each run stays challenging.
+        </p>
+      </article>
+      <article class="engine-card glass">
+        <h3>Visual Pulse</h3>
+        <p>
+          Experience a futuristic interface with glowing cycles and smooth motion.
+        </p>
+      </article>
+      <article class="engine-card glass">
+        <h3>Instant Mastery</h3>
+        <p>
+          Generate custom challenges in seconds, from complete basics to elite prep.
+        </p>
+      </article>
+      <article class="engine-card glass">
+        <h3>Global Reach</h3>
+        <p>
+          Connect with a global community of learners. Share, compare, and compete.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- FOOTER (matches: logo + name + social + © text) -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">AI QUIZ GENERATOR</div>
+      <div class="footer-social">
+        <a href="#">X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Discord</a>
+      </div>
+      <div class="footer-copy">
+        © 2026 AI Quiz Generator. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

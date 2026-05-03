@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Quiz Generator — Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="bg-layer bg-gradient"></div>
+    <div class="bg-layer bg-mesh"></div>
+    <div class="bg-layer bg-grain"></div>
+    <canvas id="particles" class="bg-layer"></canvas>
+
+    <main class="app-root">
+        <section id="page-quiz" class="page page-active">
+            <header class="quiz-header">
+                <div class="progress-wrap">
+                    <div class="progress-label">
+                        Question <span id="current-q-num">1</span> of <span id="total-q-num">5</span>
+                    </div>
+                    <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+                </div>
+
+                <div class="timer-box" id="timer-box">
+                    <svg class="timer-ring" width="72" height="72" viewBox="0 0 72 72">
+                        <circle cx="36" cy="36" r="30" class="timer-ring-bg"></circle>
+                        <circle cx="36" cy="36" r="30" class="timer-ring-fg" id="timer-ring-fg"></circle>
+                    </svg>
+                    <span class="timer-value" id="timer-value">15</span>
+                </div>
+            </header>
+
+            <div class="glass-card quiz-card">
+                <div class="quiz-topic-tag" id="quiz-topic-tag">TOPIC</div>
+                <h2 class="question-text" id="question-text">Question goes here</h2>
+                <div class="options-grid" id="options-grid"></div>
+                <div class="quiz-footer">
+                    <button id="skip-btn" class="btn-ghost">Skip question →</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

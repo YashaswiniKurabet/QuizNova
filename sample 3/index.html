@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Quiz Generator — Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="bg-layer bg-gradient"></div>
+    <div class="bg-layer bg-mesh"></div>
+    <div class="bg-layer bg-grain"></div>
+    <canvas id="particles" class="bg-layer"></canvas>
+
+    <main class="app-root">
+        <section id="page-home" class="page page-active">
+            <div class="brand">
+                <span class="brand-dot"></span>
+                <span class="brand-text">NEURAL.QUIZ</span>
+            </div>
+
+            <div class="glass-card home-card">
+                <div class="badge-pill">
+                    <span class="pulse-dot"></span>
+                    AI-POWERED &middot; v2.026
+                </div>
+
+                <h1 class="title">AI Quiz <span class="title-accent">Generator</span></h1>
+
+                <p class="subtitle">
+                    Pick a topic. Choose your difficulty. Race the clock.
+                    Our neural engine crafts a quiz tuned just for you.
+                </p>
+
+                <div class="form-group">
+                    <label for="topic-input" class="form-label">TOPIC</label>
+                    <div class="input-wrap">
+                        <input id="topic-input" type="text" class="form-input"
+                               placeholder="e.g. Space, Tech, History, Movies…" autocomplete="off" />
+                    </div>
+                    <div class="chip-row">
+                        <button class="chip" data-topic="Science">Science</button>
+                        <button class="chip" data-topic="Technology">Technology</button>
+                        <button class="chip" data-topic="History">History</button>
+                        <button class="chip" data-topic="Sports">Sports</button>
+                        <button class="chip" data-topic="Movies">Movies</button>
+                        <button class="chip" data-topic="Geography">Geography</button>
+                        <button class="chip" data-topic="General">General</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="difficulty-select" class="form-label">DIFFICULTY</label>
+                    <div class="select-wrap">
+                        <select id="difficulty-select" class="form-select">
+                            <option value="Easy">Easy — 20s per question</option>
+                            <option value="Medium" selected>Medium — 15s per question</option>
+                            <option value="Hard">Hard — 10s per question</option>
+                        </select>
+                        <span class="select-chevron">▾</span>
+                    </div>
+                </div>
+
+                <button id="generate-btn" class="btn-neon">
+                    <span class="btn-label">GENERATE QUIZ</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+
+                <div class="meta-row">
+                    <div class="meta-item"><span class="meta-value" id="meta-questions">5</span><span class="meta-key">questions</span></div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item"><span class="meta-value" id="meta-timer">15s</span><span class="meta-key">per question</span></div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item"><span class="meta-value">∞</span><span class="meta-key">retries</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
